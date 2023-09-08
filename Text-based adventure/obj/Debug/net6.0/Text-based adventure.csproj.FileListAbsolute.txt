@@ -1,0 +1,14 @@
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\bin\Debug\net6.0\Text-based adventure.exe
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\bin\Debug\net6.0\Text-based adventure.deps.json
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\bin\Debug\net6.0\Text-based adventure.runtimeconfig.json
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\bin\Debug\net6.0\Text-based adventure.dll
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\bin\Debug\net6.0\Text-based adventure.pdb
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\obj\Debug\net6.0\Text-based adventure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\obj\Debug\net6.0\Text-based adventure.AssemblyInfoInputs.cache
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\obj\Debug\net6.0\Text-based adventure.AssemblyInfo.cs
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\obj\Debug\net6.0\Text-based adventure.csproj.CoreCompileInputs.cache
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\obj\Debug\net6.0\Text-based adventure.dll
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\obj\Debug\net6.0\refint\Text-based adventure.dll
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\obj\Debug\net6.0\Text-based adventure.pdb
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\obj\Debug\net6.0\Text-based adventure.genruntimeconfig.cache
+C:\Users\Jimbo\Documents\C#\leerjaar 3\Text-based adventure\Text-based adventure\obj\Debug\net6.0\ref\Text-based adventure.dll
