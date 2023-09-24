@@ -220,6 +220,7 @@ _#/|##########/\######(   /\   )######/\##########|\#_
         Console.ResetColor();
 
 
+        
 
 
         if (choice1 != null)
@@ -233,6 +234,24 @@ _#/|##########/\######(   /\   )######/\##########|\#_
 
                 case "2":
                     Console.WriteLine("");
+                    Console.WriteLine("Welcome to the Adventure Game!");
+                    Console.WriteLine("In this game, you will embark on a journey in a desert landscape.");
+                    Console.WriteLine("Your goal is to solve the final puzzle to complete the game.");
+                    Console.WriteLine("Along the way, you'll face choices and challenges.");
+                    Console.WriteLine("Let's get started! Press Enter to begin...");
+                    Console.ReadLine();
+                    Console.Clear();
+
+                    Console.WriteLine("Instructions:");
+                    Console.WriteLine("1. Use the keyboard to make choices.");
+                    Console.WriteLine("2. Follow the objectives displayed to progress.");
+                    Console.WriteLine("3. Pay attention to the story and clues.");
+                    Console.WriteLine("4. Be careful with your choices; some may lead to game over.");
+                    Console.WriteLine("5. Have fun and enjoy the adventure!");
+
+                    Console.WriteLine("Press Enter to start your journey...");
+                    Console.ReadLine();
+         
                     break;
 
                 default:
@@ -283,6 +302,8 @@ _#/|##########/\######(   /\   )######/\##########|\#_
             switch (choice)
             {
                 case "castle":
+                    Console.WriteLine("Objective: Find the treasure chest.");
+                    Console.WriteLine("");
                     Console.WriteLine("you are standing in front of the mysterious castle.");
                     Console.WriteLine("Do you want to go left or right? (left/right)");
 
@@ -290,22 +311,46 @@ _#/|##########/\######(   /\   )######/\##########|\#_
 
                     Console.Clear();
 
-
                     switch (choice)
                     {
                         case "left":
+                            Console.WriteLine("Objective: Solve the puzzle.");
+                            Console.WriteLine("");
                             Console.WriteLine("You follow the left tunnel and find a treasure chest!");
                             Console.WriteLine("Congratulations! you have found a key and can now solve the puzzle!");
 
+                            Console.WriteLine("Do you want to open the treasure chest? (yes/no)");
+                            string openChestChoice = Console.ReadLine().ToLower();
+
+                            if (openChestChoice == "yes")
+                            {
+                                Console.WriteLine("Here is your puzzle/question: What is the capital of France?");
+                                string answer = Console.ReadLine().ToLower();
+
+                                if (answer == "paris")
+                                {
+                                    Console.WriteLine("Correct! You have completed the puzzle!");
+                                    Console.WriteLine("You have completed the game. Congratulations!");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Wrong answer. Game over!");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("You chose not to open the treasure chest. Game over!");
+                            }
 
                             break;
-                        case "right":
 
+                        case "right":
                             Console.WriteLine(asciiArt11);
                             Console.WriteLine("");
                             Console.WriteLine("You follow the right tunnel and encounter a dragon.");
                             Console.WriteLine("You were not prepared, and the dragon defeats you. Game over!");
                             break;
+
                         default:
                             Console.WriteLine("Invalid choice. Game over!");
                             break;
@@ -315,40 +360,61 @@ _#/|##########/\######(   /\   )######/\##########|\#_
 
 
 
+
+
                 case "dinner":
                     Console.Clear();
                     Console.WriteLine(asciiArt10);
                     Console.WriteLine("");
-                    Console.WriteLine("You decided to gathered some food together and are making dinner.");
-                    choice = Console.ReadLine().ToLower();
+                    Console.WriteLine("You decided to gather some food together and make dinner.");
+                    choice1 = Console.ReadLine().ToLower();
                     Console.Clear();
-                    Console.WriteLine("choose which dish you want to make");
-
+                    Console.WriteLine("Objective: Make dinner.");
+                    Console.WriteLine();
+                    Console.WriteLine("Choose which dish you want to make:");
                     Console.WriteLine("Mushrooms, Insects, Berries");
                     Console.WriteLine("");
 
-
                     choice = Console.ReadLine().ToLower();
                     Console.Clear();
-                    if (choice == "Mushrooms")
-                    {
-                        Console.WriteLine("You follow the left tunnel and find a treasure chest!");
-                        Console.WriteLine("Congratulations! you have found a key and can now solve the puzzle!");
-                        break;
-                    }
-                    if (choice == "Insects")
-                    {
-                        Console.WriteLine("You follow the right tunnel and encounter a dragon.");
-                        Console.WriteLine("You were not prepared, and the dragon defeats you. Game over!");
-                        break;
 
-                    }
-                    if (choice == "Berries")
+                    if (choice == "mushrooms")
                     {
-                        Console.WriteLine("You follow the right tunnel and encounter a dragon.");
-                        Console.WriteLine("You were not prepared, and the dragon defeats you. Game over!");
+                        Console.WriteLine("You are poisoned and you are going to die.");
+                        return; 
+                    }
+
+                    if (choice == "insects")
+                    {
+                        Console.WriteLine("You gathered some insects and tried your best to cook them. It wasn't the tastiest meal, but it filled your stomachs.");
+                        Console.WriteLine("The night was tough as the insects didn't sit well with your stomachs. You had a restless night.");
+
+                        Console.WriteLine("Here is your puzzle/question: What is the capital of Germany?");
+                        string answer = Console.ReadLine().ToLower();
+
+                        if (answer == "berlin")
+                        {
+                            Console.WriteLine("Correct! You survived the night and can continue your journey.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Wrong answer. You didn't survive the night. Game over!");
+                            return; 
+                        }
+
                         break;
                     }
+
+                    if (choice == "berries")
+                    {
+                        Console.WriteLine("You are poisoned and you are going to die.");
+                        return; 
+                    }
+                    break;
+
+
+
+
 
 
                     continueGame = false;
