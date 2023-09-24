@@ -211,7 +211,7 @@ _#/|##########/\######(   /\   )######/\##########|\#_
         Console.SetCursorPosition(0, screenHeight - 1);
         Console.Write("Copyright\u00A9: ");
         Console.ResetColor();
-        Console.Write("Colin van Steenhoven");
+        Console.Write("Jim Pilon");
 
         Console.SetCursorPosition(Math.Max((screenWidth - 15) / 2, 0), logoPadding + i + 2);
         Console.Write("Enter your choice: ");
