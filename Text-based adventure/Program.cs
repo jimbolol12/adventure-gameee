@@ -58,7 +58,7 @@ __|          ;     |MM""MM""""""""""---..._______...--""""MM""MM]               
         /;/`:       ######,          ____             _ :     M||||||M     |  
        ###          /;""\.__""-._   """"""                   |===..M!!!!!!M_____|  
                            `--..`--.._____             _!_                    
-                                          `--...____,=""_.'`-.____        fsc";
+                                          `--...____,=""_.'`-.____        ";
 
 
         string asciiArt = @"
@@ -192,8 +192,7 @@ _#/|##########/\######(   /\   )######/\##########|\#_
 
         Console.ForegroundColor = ConsoleColor.DarkRed;
 
-
-        logoPadding = 5; 
+        logoPadding = 5;
 
         // Menuopties
         Console.SetCursorPosition(Math.Max((screenWidth - 7) / 2, 0), logoPadding + i);
@@ -218,10 +217,6 @@ _#/|##########/\######(   /\   )######/\##########|\#_
         string? choice1 = Console.ReadLine();
 
         Console.ResetColor();
-
-
-        
-
 
         if (choice1 != null)
         {
@@ -251,7 +246,7 @@ _#/|##########/\######(   /\   )######/\##########|\#_
 
                     Console.WriteLine("Press Enter to start your journey...");
                     Console.ReadLine();
-         
+
                     break;
 
                 default:
@@ -264,18 +259,15 @@ _#/|##########/\######(   /\   )######/\##########|\#_
             Console.WriteLine("Invalid input. Please enter a valid choice.");
         }
 
-
-
         Console.ReadLine();
         Console.Clear();
         Console.WriteLine(asciiArt);
 
         bool continueGame = true;
 
-
-
         while (continueGame)
         {
+
 
             Console.WriteLine("your story takes place in Kabul, a dessert landscape, your goal is to solve the final puzzle, press enter to continue...");
             Console.ReadLine();
@@ -291,23 +283,23 @@ _#/|##########/\######(   /\   )######/\##########|\#_
             /*Console.WriteLine("You find yourself standing in front of a mysterious cave.");*/
             Console.WriteLine("do you choose to go to the castle or to make dinner? (castle/dinner)");
 
-            string choice = Console.ReadLine().ToLower();
+            string choice = ValidateInput("castle", "dinner");
 
 
             Console.Clear();
-
-          
             Console.WriteLine(asciiArt2);
 
             switch (choice)
             {
+
                 case "castle":
+
                     Console.WriteLine("Objective: Find the treasure chest.");
                     Console.WriteLine("");
                     Console.WriteLine("you are standing in front of the mysterious castle.");
                     Console.WriteLine("Do you want to go left or right? (left/right)");
 
-                    choice = Console.ReadLine().ToLower();
+                    choice = ValidateInput("left", "right");
 
                     Console.Clear();
 
@@ -358,10 +350,6 @@ _#/|##########/\######(   /\   )######/\##########|\#_
                     continueGame = false;
                     break;
 
-
-
-
-
                 case "dinner":
                     Console.Clear();
                     Console.WriteLine(asciiArt10);
@@ -381,7 +369,7 @@ _#/|##########/\######(   /\   )######/\##########|\#_
                     if (choice == "mushrooms")
                     {
                         Console.WriteLine("You are poisoned and you are going to die.");
-                        return; 
+                        return;
                     }
 
                     if (choice == "insects")
@@ -394,12 +382,13 @@ _#/|##########/\######(   /\   )######/\##########|\#_
 
                         if (answer == "berlin")
                         {
-                            Console.WriteLine("Correct! You survived the night and can continue your journey.");
+                            Console.WriteLine("Correct! You have completed the puzzle!");
+                            Console.WriteLine("You have completed the game. Congratulations!");
                         }
                         else
                         {
                             Console.WriteLine("Wrong answer. You didn't survive the night. Game over!");
-                            return; 
+                            return;
                         }
 
                         break;
@@ -408,27 +397,26 @@ _#/|##########/\######(   /\   )######/\##########|\#_
                     if (choice == "berries")
                     {
                         Console.WriteLine("You are poisoned and you are going to die.");
-                        return; 
+                        return;
                     }
                     break;
-
-
-
-
-
-
-                    continueGame = false;
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice. Game over!");
-                    break;
-
-                    Console.WriteLine("Press any key to exit...");
-                    Console.ReadKey();
-
             }
         }
+        static string ValidateInput(params string[] validOptions)
+        {
+            string choice = Console.ReadLine().ToLower();
 
+            while (Array.IndexOf(validOptions, choice) == -1)
+            {
+                Console.WriteLine("Invalid choice. Choose again!");
+                choice = Console.ReadLine().ToLower();
+            }
+
+            return choice;
+
+        }
     }
 }
+
+
 
